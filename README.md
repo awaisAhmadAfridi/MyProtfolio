@@ -29,3 +29,10 @@ A modern, animated and responsive developer portfolio website built with React, 
 
 
 ## 📂 Project Structure
+src/
+│
+├── components/
+├── sections/
+├── assets/
+├── App.tsx
+└── main.tsx
