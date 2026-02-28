@@ -5,6 +5,7 @@ import { Send, Mail, MapPin, Phone, Github, Linkedin, Twitter, ArrowUpRight } fr
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import emailjs from '@emailjs/browser';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -119,21 +120,31 @@ const Contact = () => {
   }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  e.preventDefault();
+  setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+  try {
+    await emailjs.sendForm(
+      'service_wgg03ia',
+      'template_49rhj6m',
+      formRef.current!,
+      'qLkuOAn0Fq40qx6gU'
+    );
 
     setIsSubmitting(false);
     setIsSubmitted(true);
 
-    // Reset after 3 seconds
+    // Reset form after 3 seconds
     setTimeout(() => {
       setIsSubmitted(false);
-      (e.target as HTMLFormElement).reset();
+      formRef.current?.reset();
     }, 3000);
-  };
+  } catch (error) {
+    console.error('Failed to send email:', error);
+    alert('Failed to send message. Please try again.');
+    setIsSubmitting(false);
+  }
+};
 
   const contactInfo = [
     { icon: <Mail className="w-5 h-5" />, label: 'Email', value: 'awaisafridi7408@gmail.com' },
@@ -186,6 +197,7 @@ const Contact = () => {
                   type="text"
                   placeholder="Your name"
                   required
+                  name="user_name" 
                   className="w-full px-6 py-4 rounded-xl bg-white/5 border-white/10 focus:border-purple focus:ring-purple/20 transition-all duration-300"
                 />
               </div>
@@ -198,6 +210,7 @@ const Contact = () => {
                   type="email"
                   placeholder="your@email.com"
                   required
+                  name="user_email"
                   className="w-full px-6 py-4 rounded-xl bg-white/5 border-white/10 focus:border-purple focus:ring-purple/20 transition-all duration-300"
                 />
               </div>
@@ -210,6 +223,7 @@ const Contact = () => {
                   placeholder="Tell me about your project..."
                   required
                   rows={5}
+                  name="message"
                   className="w-full px-6 py-4 rounded-xl bg-white/5 border-white/10 focus:border-purple focus:ring-purple/20 transition-all duration-300 resize-none"
                 />
               </div>
