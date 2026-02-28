@@ -171,9 +171,9 @@ const About = () => {
   }, []);
 
   const stats = [
-    { value: 50, suffix: '+', label: 'Projects Completed', icon: <Briefcase className="w-6 h-6 text-purple" /> },
-    { value: 5, suffix: '', label: 'Years Experience', icon: <Code2 className="w-6 h-6 text-pink" /> },
-    { value: 30, suffix: '+', label: 'Happy Clients', icon: <Users className="w-6 h-6 text-blue-accent" /> },
+    { value: 5, suffix: '', label: 'Projects Completed', icon: <Briefcase className="w-6 h-6 text-purple" /> },
+    { value: 1, suffix: '', label: 'Years Experience', icon: <Code2 className="w-6 h-6 text-pink" /> },
+    { value: 10, suffix: '+', label: 'Happy Clients', icon: <Users className="w-6 h-6 text-blue-accent" /> },
     { value: 15, suffix: '+', label: 'Design Awards', icon: <Palette className="w-6 h-6 text-purple" /> },
   ];
 
@@ -208,27 +208,28 @@ const About = () => {
 
             <div className="relative z-10">
               <h3 className="font-heading text-2xl sm:text-3xl font-semibold mb-6">
-                Crafting Digital <span className="text-gradient">Experiences</span>
+                Full-Stack <span className="text-gradient">Developer</span>
               </h3>
 
               <p
                 ref={textRef}
                 className="text-muted-foreground text-lg leading-relaxed mb-6 opacity-0"
               >
-                I craft digital experiences that merge artistic vision with technical precision. 
-                With over 5 years in the industry, I specialize in creating interfaces that 
-                don't just look good—they feel alive.
+                I am a passionate Full-Stack Developer specializing in building scalable
+                web applications using .NET and React. With hands-on experience in backend
+                architecture and modern frontend development, I create secure, high-performance
+                solutions tailored to real-world business needs.
               </p>
 
               <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-                My passion lies at the intersection of design and development, where I bring 
-                creative concepts to life through clean code and thoughtful interactions. Every 
-                project is an opportunity to push boundaries and create something memorable.
+                From designing RESTful APIs to crafting responsive user interfaces, I focus
+                on writing clean, maintainable code and delivering seamless digital experiences.
+                I enjoy turning complex ideas into efficient, production-ready applications.
               </p>
 
               {/* Skills tags */}
               <div className="flex flex-wrap gap-3">
-                {['React', 'TypeScript', 'Three.js', 'Figma', 'Node.js', 'GSAP'].map((skill) => (
+                {['ASP.NET Core','ASP.NET Core MVC', 'C#', 'SQL Server', 'React', 'TypeScript', 'JWT Auth'].map((skill) => (
                   <span
                     key={skill}
                     className="px-4 py-2 rounded-full text-sm font-medium bg-white/5 border border-white/10 hover:border-purple/50 hover:bg-purple/10 transition-all duration-300"

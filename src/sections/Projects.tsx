@@ -19,43 +19,33 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: 'Neon Nexus',
-    description: 'A cyberpunk-inspired dashboard with real-time data visualization and immersive UI interactions.',
-    image: '/images/project1.jpg',
-    tags: ['React', 'D3.js', 'WebGL'],
+    title: 'Tailor Managment System',
+    description: 'A modern tailor management system that simplifies order processing, customer measurement records, invoice generation, and delivery tracking through a structured and user-friendly dashboard.',
+    image: '/images/tailor.png',
+    tags: ['Core PhP', 'Restful API', 'MySQL', 'JQuery'],
     liveUrl: '#',
     githubUrl: '#',
     color: 'from-purple to-pink',
   },
   {
     id: 2,
-    title: 'EcoLife',
-    description: 'Sustainability tracking app helping users reduce their carbon footprint through gamification.',
-    image: '/images/project2.jpg',
-    tags: ['React Native', 'Node.js', 'MongoDB'],
+    title: 'Blood Donation WebApp',
+    description: 'A full-stack blood donation management system that enables donor registration, blood request tracking, and efficient coordination between donors and recipients with secure authentication and optimized database management.',
+    image: '/images/BloodDonation.png',
+    tags: ['Laravel', 'Restful API', 'MySQL', 'JQuery'],
     liveUrl: '#',
     githubUrl: '#',
     color: 'from-green-400 to-emerald-600',
   },
   {
     id: 3,
-    title: 'AeroSpace',
-    description: '3D flight visualization platform with real-time tracking and immersive globe interactions.',
-    image: '/images/project3.jpg',
-    tags: ['Three.js', 'WebGL', 'TypeScript'],
+    title: 'Pharmacy Management System',
+    description: 'A comprehensive pharmacy management system that streamlines inventory tracking, prescription processing, and customer billing.',
+    image: '/images/pharmacy.png',
+    tags: ['.Net Core MVC', 'Restful API', 'SQL Server', 'React'],
     liveUrl: '#',
     githubUrl: '#',
     color: 'from-blue-400 to-cyan-600',
-  },
-  {
-    id: 4,
-    title: 'CryptoVault',
-    description: 'Modern cryptocurrency trading interface with advanced charting and portfolio management.',
-    image: '/images/project4.jpg',
-    tags: ['Vue.js', 'Python', 'WebSocket'],
-    liveUrl: '#',
-    githubUrl: '#',
-    color: 'from-amber-400 to-yellow-600',
   },
 ];
 
@@ -176,7 +166,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
           </div>
 
           {/* Actions */}
-          <div className="flex items-center gap-4">
+          {/* <div className="flex items-center gap-4">
             <a
               href={project.liveUrl}
               className="flex items-center gap-2 text-sm font-medium text-purple hover:text-pink transition-colors"
@@ -191,7 +181,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
               <Github className="w-4 h-4" />
               Source
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
