@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ExternalLink, Github, ArrowRight } from 'lucide-react';
-
+//import { ExternalLink, Github, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 gsap.registerPlugin(ScrollTrigger);
 
 interface Project {
@@ -39,7 +39,7 @@ const projects: Project[] = [
   },
   {
     id: 3,
-    title: 'Pharmacy Management System',
+    title: 'Pharmacy Management',
     description: 'A comprehensive pharmacy management system that streamlines inventory tracking, prescription processing, and customer billing.',
     image: '/images/pharmacy.png',
     tags: ['.Net Core MVC', 'Restful API', 'SQL Server', 'React'],
